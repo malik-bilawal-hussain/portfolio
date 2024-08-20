@@ -40,6 +40,40 @@
     width: 100% !important;
     height: 254px !important;
   }
+ 
+  video {
+    width: 100%; /* Adjusts the video to fit the width of its container */
+    height: auto; /* Maintains the aspect ratio */
+  }
+  .card-heading {
+  
+    padding: 10px; /* Add some padding inside the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #333; /* Optional: Add a background color */
+   
+}
+
+.card-heading a {
+    text-decoration: none; /* Remove the underline from the link */
+    color: #fff; /* Change the text color if needed */
+    font-weight: bold; /* Make the text bold */
+}
+
+.card-heading a:hover {
+    color: #EF3724 !important; /* Optional: Change text color on hover */
+}
+.project-portfolio {
+  border: 2px solid #ccc; /* Add a border around the heading */
+  border-radius: 5px; /* Optional: Round the corners */
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    visibility: visible;
+    animation-name: zoomIn;
+    background: #333;
+    padding: 10px 5px 0px 5px !important;
+    /* top: 282.888px !important; */
+}
   </style>
 </head>
 <body class="theme-red">
@@ -88,7 +122,7 @@
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
       <div class="container">
-        <a href="" class="navbar-brand">V-Folio</a>
+        <a href="" class="navbar-brand">CosmoSoul</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
           <span class="ti-menu"></span>
         </button>
@@ -103,16 +137,17 @@
             <li class="nav-item">
               <a href="#portfolio" class="nav-link" data-animate="scrolling">Portfolio</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="#blog" class="nav-link" data-animate="scrolling">Blog</a>
             </li>
             <li class="nav-item">
               <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>
-            </li>
+            </li> -->
           </ul>
           <ul class="nav ml-auto">
             <li class="nav-item">
-              <button class="btn btn-fab btn-theme no-shadow">Bs</button>
+              <img  class="btn btn-fab btn-theme no-shadow" src="./assets/img/bilawal-hussain.jpg"/>
+              <!-- <button class="btn btn-fab btn-theme no-shadow">Bs</button> -->
             </li>
           </ul>
         </div>
@@ -145,7 +180,9 @@
             <li><b>Age:</b> 28</li>
             <li><b>Gender:</b> Male</li>
           </ul>
-          <button class="btn btn-theme-outline">Download CV</button>
+          <!-- <button class="btn btn-theme-outline">Download CV</button> -->
+          <a href="./assets/img/14-5-25-Bilawal-dev.pdf" target="_blank" class="btn btn-theme-outline">Download CV</a>
+         
         </div>
       </div>
     </div>
@@ -162,7 +199,13 @@
               </div>
             </div>
             <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">Jquery & VueJs</span>
+              <span class="caption">Nodejs</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">80%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Jquery, VueJs , Reactjs</span>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 81%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">81%</div>
               </div>
@@ -189,7 +232,7 @@
             <div class="progress-wrapper wow fadeInUp">
               <span class="caption">Aws</span>
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 72%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">72%</div>
+                <div class="progress-bar" role="progressbar" style="width: 51%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">51%</div>
               </div>
             </div>
             <div class="progress-wrapper wow fadeInUp">
@@ -201,7 +244,13 @@
             <div class="progress-wrapper wow fadeInUp">
               <span class="caption">Api Softwares</span>
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 79%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">79%</div>
+                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">79%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">MYSQL, MONGO, POSTGRES</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 69%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">69%</div>
               </div>
             </div>
           </div>
@@ -358,28 +407,38 @@
       </div>
       <h1 class="text-center fw-normal wow fadeInUp">See my work</h1>
       <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
-       <!--  <button class="btn btn-theme-outline selected" data-filter="*">All</button>
-        <button class="btn btn-theme-outline" data-filter=".apps">Apps</button>
-        <button class="btn btn-theme-outline" data-filter=".template">Template</button>
-        <button class="btn btn-theme-outline" data-filter=".ios">IOS</button>
-        <button class="btn btn-theme-outline" data-filter=".ui-ux">UI/UX</button>
-        <button class="btn btn-theme-outline" data-filter=".graphic">Graphic</button>
-        <button class="btn btn-theme-outline" data-filter=".wireframes">Wireframes</button> -->
+        
       </div>
-
+      
       <div class="gridder my-3">
-        <div class="grid-item apps wow zoomIn"><!-- zoomIn -->
-          <div class="img-place" data-src="./assets/img/work/zebra.PNG" data-fancybox data-caption="<h5 class='fg-theme'>ecommerce</h5> <a href='https://www.zebra.com.pk/' target='blank'>visit, zebra website</a>">
-            <img src="./assets/img/work/zebra.PNG" alt="zebra" class="project_img">
-            <div class="img-caption">
-              <h5 class="fg-theme">
-                Zebra
-              </h5>
-                <p>zebra.com.pk</p>              
-            </div>
-          </div>
+        <div class="grid-item apps wow zoomIn project-portfolio">
+          <video src="./assets/videos/Hiring Helmet.webm" autoplay muted controls></video>
+          <h3 class="card-heading"><a href="https://hiringhelmet.com/" target="_blank">Hiring Helmet</a></h3>
         </div>
-        <div class="grid-item template wireframes wow zoomIn">
+        <div class="grid-item apps wow zoomIn project-portfolio">
+          <video src="./assets/videos/AD GAS – –.webm" autoplay muted controls></video>
+          <h3 class="card-heading"><a href="https://adgasltd.com/" target="_blank">Ad Gas</a></h3>
+        </div>
+        <div class="grid-item apps wow zoomIn project-portfolio">
+          <video src="./assets/videos/Untitled video - Made with Clipchamp.mp4" muted autoplay controls></video>
+          <h3 class="card-heading"><a href="https://orderbeez.me/register" target="_blank">Order Beez</a></h3>
+        </div>
+        <div class="grid-item apps wow zoomIn project-portfolio">
+          <video src="./assets/videos/African Foundation for Development (AFFORD).mp4" autoplay muted controls></video>
+          <h3 class="card-heading"><a href="https://afford-uk.org/" target="_blank">African Foundation</a></h3>
+        </div>
+        <div class="grid-item apps wow zoomIn project-portfolio">
+          <video src="./assets/videos/Shop by health concern - Total Health Secrets.webm" autoplay muted controls></video>
+          <h3 class="card-heading"><a href="https://totalhealthsecrets.com/" target="_blank">Total Health Secret</a></h3>
+        </div>
+        <div class="grid-item apps wow zoomIn project-portfolio">
+          <video src="./assets/videos/propagrub.webm" autoplay muted controls></video>
+          <h3 class="card-heading"><a href="https://propagrub.com/" target="_blank">Propagrub</a></h3>
+        </div>
+       
+
+
+        <!-- <div class="grid-item template wireframes wow zoomIn">
           <div class="img-place" data-src="./assets/img/work/orderbeez.PNG" data-fancybox data-caption="<h5 class='fg-theme'>ecommerce App</h5> <a href='https://orderbeez.me/' target='blank'>visit Orderbeez</a>">
             <img src="./assets/img/work/orderbeez.PNG" alt="orderbeez" class="project_img">
             <div class="img-caption">
@@ -387,38 +446,12 @@
               <p>orderbeez.me</p>
             </div>
           </div>
-        </div>
-        <div class="grid-item apps ios wow zoomIn">
-          <div class="img-place" data-src="./assets/img/work/adgas.PNG" data-fancybox data-caption="<h5 class='fg-theme'>Gas Dashboard</h5> <a href='https://gogreenbriton.com' target='blank'>visit, ADGas</a>">
-            <img src="./assets/img/work/adgas.PNG" alt="adgas" class="project_img">
-            <div class="img-caption">
-              <h5 class="fg-theme">AD Gas</h5>
-              <p>gogreenbriton.com</p>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item graphic ui-ux wow zoomIn">
-          <div class="img-place" data-src="./assets/img/work/abc_portal.PNG" data-fancybox data-caption="<h5 class='fg-theme'>NGO Dashboard App</h5> <p href='https://portal.afford-uk.org' target='blank'>NGO ,App </a>">
-            <img src="./assets/img/work/abc_portal.PNG" alt="abc_portal" class="project_img">
-            <div class="img-caption">
-              <h5 class="fg-theme">Afford Portal</h5>
-              <p>portal.afford-uk.org/</p>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item apps ios wow zoomIn">
-          <div class="img-place" data-src="./assets/img/work/abc_dashboard.PNG" data-fancybox data-caption="<h5 class='fg-theme'>Musics Discover</h5> <p>afford, Dashboard</p>">
-            <img src="./assets/img/work/abc_dashboard.PNG" alt="abc_dashboard" class="project_img">
-            <div class="img-caption">
-              <h5 class="fg-theme">Afford Dashboard</h5>
-              <p>Personal Link</p>
-            </div>
-          </div>
-        </div>
+        </div> -->
         
-      </div> <!-- End gridder -->
+        
+      </div>
       <div class="text-center wow fadeInUp">
-        <a href="javascript:void(0)" class="btn btn-theme">Load More</a>
+        <!-- <a href="javascript:void(0)" class="btn btn-theme">Load More</a> -->
       </div>
     </div>
   </div> <!-- End Portfolio page -->
@@ -503,8 +536,10 @@
             <ul class="list-unstyled">
               <li><a href="https://www.instagram.com/bilawal4004/">Instagram</a></li>
               <li><a href="https://www.facebook.com/bilawal.hussain.1694" target="blank">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Youtube</a></li>
+              <li><a href="https://www.linkedin.com/in/hussain-bilawal-625895186/" target="blank">Linkedin</a></li>
+             
+              <!-- <li><a href="#">Twitter</a></li> -->
+              <!-- <li><a href="#">Youtube</a></li> -->
             </ul>
           </div>
         </div>
@@ -513,8 +548,8 @@
             <p>Contact me</p>
             <hr class="divider">
             <ul class="list-unstyled">
-              <li>balimalik041@gmail.com</li>
-              <li>+923237073684</li>
+              <li><a href="mailto:balimalik041@gmail.com">balimalik041@gmail.com</a></li>
+              <li><a href="tel:+923237073684">+923237073684</a></li>
               <!-- <li>+813023</li> -->
             </ul>
           </div>
@@ -533,7 +568,7 @@
           </form>
         </div>
         <div class="col-12">
-          <p class="text-center mb-0 mt-4">Copyright &copy;2020. All right reserved | This template is made with <span class="ti-heart fg-theme-red"></span> by <a href="#">MACode ID</a></p>
+          <!-- <p class="text-center mb-0 mt-4">Copyright &copy;2020. All right reserved | This template is made with <span class="ti-heart fg-theme-red"></span> by <a href="#">MACode ID</a></p> -->
         </div>
       </div>
     </div>
