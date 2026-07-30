@@ -318,7 +318,13 @@
     display:flex; align-items:center; justify-content:center;
     font-family:var(--display); font-weight:700; font-size:2rem; color:var(--cyan);
     border:1px solid var(--hairline);
+    overflow:hidden;
+    transition: transform 0.8s cubic-bezier(0.65,0.05,0.36,1);
   }
+  .ceo-avatar img{
+    width:100%; height:100%; object-fit:cover; object-position:center 20%;
+  }
+  .ceo-card:hover .ceo-avatar{ transform: rotateY(360deg); }
   .ceo-inner h3{ font-size:1.3rem; }
   .ceo-inner .role{ font-family:var(--mono); font-size:0.78rem; color:var(--cyan); margin-top:6px; letter-spacing:0.04em; }
   .ceo-inner .loc{ color:var(--muted); font-size:0.85rem; margin-top:14px; }
@@ -540,10 +546,10 @@
 
 <section id="ceo">
   <div class="wrap ceo">
-    <div class="ceo-card reveal">
+   <div class="ceo-card reveal">
       <div class="ceo-inner">
         <div class="ceo-avatar">
-                        <img  class="btn btn-fab btn-theme no-shadow" src="./assets/img/bilawal-hussain.jpg"/>
+          <img src="./assets/img/bilawal.jpg" alt="Bilawal Hussain">
         </div>
         <h3>Bilawal Hussain</h3>
         <div class="role">Founder & CEO</div>
