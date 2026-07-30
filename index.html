@@ -274,8 +274,15 @@
     font-family:var(--display); font-weight:700; font-size:1.8rem;
     color:rgba(237,239,244,0.92);
     position:relative;
+    overflow:hidden;
   }
-  .proj-face::after{ content:""; position:absolute; inset:0; background:linear-gradient(160deg, rgba(255,255,255,0.06), transparent 60%); }
+  .proj-face::after{ content:""; position:absolute; inset:0; background:linear-gradient(160deg, rgba(255,255,255,0.06), transparent 60%); pointer-events:none; }
+  .proj-face video{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:top center;
+    transition: transform .4s ease;
+  }
+  .proj-card:hover .proj-face video{ transform:scale(1.05); }
   .proj-body{ padding:20px 22px 24px; transform:translateZ(20px); }
   .proj-body h4{ font-size:1.05rem; margin-bottom:6px; }
   .proj-body span{ color:var(--muted); font-family:var(--mono); font-size:0.78rem; }
@@ -535,7 +542,9 @@
   <div class="wrap ceo">
     <div class="ceo-card reveal">
       <div class="ceo-inner">
-        <div class="ceo-avatar">BH</div>
+        <div class="ceo-avatar">
+                        <img  class="btn btn-fab btn-theme no-shadow" src="./assets/img/bilawal-hussain.jpg"/>
+        </div>
         <h3>Bilawal Hussain</h3>
         <div class="role">Founder & CEO</div>
         <div class="loc">Islamabad, Pakistan</div>
@@ -590,7 +599,7 @@
       <div class="eyebrow" style="justify-content:center;">Let's talk</div>
       <h2>Tell us what you're building.</h2>
       <p>Whether it's a piece of software, a website, an app, or your next ad campaign — message us and we'll reply the same day.</p>
-      <a href="https://wa.me/447000000000" target="_blank" class="btn btn-primary">Chat on WhatsApp (UK) →</a>
+      <a href="https://wa.me/447547519754" target="_blank" class="btn btn-primary">Chat on WhatsApp (UK) →</a>
     </div>
   </div>
 </section>
